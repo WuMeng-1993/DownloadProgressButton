@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DownloadProgressButton">
+        <attr name="radius" format="float"/>
+        <attr name="backgroud_color" format="color"/>
+        <attr name="background_second_color" format="color"/>
+        <attr name="text_color" format="color"/>
+        <attr name="text_covercolor" format="color"/>
+    </declare-styleable>
+</resources>
