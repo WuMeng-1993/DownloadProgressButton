@@ -50,13 +50,14 @@ public class DownloadProgressButton extends androidx.appcompat.widget.AppCompatT
     }
 
     private void initAttrs(Context context, AttributeSet attrs) {
-        TypedArray a = context.obtainStyledAttributes(attrs,R.styleable.DownloadProgressButton);
-        mBackgroundColor = a.getColor(R.styleable.DownloadProgressButton_backgroud_color, Color.parseColor("#6699ff"));
-        mBackgroundSecondColor = a.getColor(R.styleable.DownloadProgressButton_background_second_color,Color.LTGRAY);
-        mButtonRadius = a.getFloat(R.styleable.DownloadProgressButton_radius,getMeasuredHeight() / 2);
-        mTextColor = a.getColor(R.styleable.DownloadProgressButton_text_color,mBackgroundColor);
-        mTextCoverColor = a.getColor(R.styleable.DownloadProgressButton_text_covercolor,Color.WHITE);
-        a.recycle();
+        TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.DownloadProgressButton);
+        mBackgroundColor = typedArray.getColor(R.styleable.DownloadProgressButton_backgroud_color, Color.parseColor("#6699ff"));
+        mBackgroundSecondColor = typedArray.getColor(R.styleable.DownloadProgressButton_background_second_color,Color.LTGRAY);
+        mButtonRadius = typedArray.getFloat(R.styleable.DownloadProgressButton_radius,getMeasuredHeight() / 2);
+        mTextColor = typedArray.getColor(R.styleable.DownloadProgressButton_text_color,mBackgroundColor);
+        mTextCoverColor = typedArray.getColor(R.styleable.DownloadProgressButton_text_covercolor,Color.WHITE);
+
+        typedArray.recycle();
     }
 
 
